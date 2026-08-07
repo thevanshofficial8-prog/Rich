@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V12koz</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+    <div class="card">
+        <!-- Profile Avatar -->
+        <div class="avatar">👤</div>
+        
+        <!-- Name & Bio -->
+        <h1>V12koz</h1>
+        <p>I am fucking Millionaire</p>
+        <div class="subtext">Welcome To TheamV12</div>
+
+        <!-- Audio Element with Loop -->
+        <audio id="bgMusic" loop>
+            <source id="audioSource" src="old-song.mp3" type="audio/mpeg">
+        </audio>
+
+        <!-- Song Switch Buttons -->
+        <div class="btn-container">
+            <button class="music-btn" onclick="switchSong('old-song.mp3')">1. Old Song</button>
+            <button class="music-btn" onclick="switchSong('Luminary.mp3')">2. Luminary</button>
+        </div>
+    </div>
+
+    <script>
+        function switchSong(songUrl) {
+            var audio = document.getElementById('bgMusic');
+            var source = document.getElementById('audioSource');
+            
+            source.src = songUrl;
+            audio.load();
+            audio.play();
+        }
+    </script>
+</body>
+</html>
